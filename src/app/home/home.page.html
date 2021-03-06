@@ -1,0 +1,34 @@
+<ion-content>
+  <body class="blackgroundhome">
+  <div class="main-div ion-padding">
+    <h1 class="ion-padding"><ion-icon name="wallet"></ion-icon>&nbsp;Income | Expenses</h1>
+
+    <div class="list">
+      <ion-list>
+        <ion-item-sliding *ngFor = "let transaction of moneyTransactions">
+          <ion-item>
+            <ion-label>
+              {{transaction.title}}
+              <p [ngClass]="{expense: transaction.type == 'expense',income: transaction.type == 'income'}">{{transaction.subTitle}}</p>
+            </ion-label>
+            <p class="amount" [ngClass]="{expense: transaction.type == 'expense',income: transaction.type == 'income'}">฿&nbsp;{{transaction.amount}}</p>
+          </ion-item>
+          <ion-item-options side="end">
+            <ion-item-option color="danger">
+              <ion-icon name="trash-outline" (click)="delete_transaction(transaction.id)"></ion-icon>
+            </ion-item-option>
+            <ion-item-option color="secondary">
+              <ion-icon name="create-outline" routerLink="/add-edit-data/{{transaction.id}}"></ion-icon>
+            </ion-item-option>
+
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+    </div>
+    &nbsp;
+    <ion-fab-button color="dark">
+      <ion-icon name="add-outline" routerLink="/add-edit-data/add"></ion-icon>
+    </ion-fab-button>
+  </div>
+</body>
+</ion-content>

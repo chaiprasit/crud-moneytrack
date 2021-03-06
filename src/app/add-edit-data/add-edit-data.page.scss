@@ -1,0 +1,48 @@
+ion-icon {
+  font-size: 2rem;
+}
+ion-icon:focus {
+  outline: none;
+}
+
+.blackgroundhome {
+  background: linear-gradient(210deg, #FC466B 0%, #3F5EFB 100%);
+}
+
+h3.ion-padding {
+  border: 2px solid #ffffff;
+  border-radius: 17px;
+  margin: 16px;
+
+}
+
+.main-section{
+  h3 {
+    font-size: 1.7rem;
+    color: white;
+    text-align: center;
+  }
+  .form{
+
+    border: 2px solid #ffffff;
+    border-radius: 17px;
+    color:white;
+
+
+    ion-select {
+      border: 1px solid #dddddd;
+      border-radius: 17px;
+    }
+
+    ion-input {
+      border: 1px solid #dddddd;
+      border-radius: 17px;
+      margin: 20px 0;
+      --padding-start: 23px;
+    }
+    ion-button{
+      width: 100%;
+      --border-radius: 17px;
+    }
+  }
+}
